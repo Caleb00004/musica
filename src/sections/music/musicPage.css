@@ -1,0 +1,133 @@
+.musicPage-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music-page button {
+    padding: 1.1em 2em 1.1em 2em;
+    border-radius: 4em;
+    margin-right: 1em;
+}
+
+.collection-btn {
+    border: 1px solid;
+    background-color: #FACD66;
+    color: #1D2123;
+}
+
+.like-btn {
+    background-color: #1D2123;
+    color: #EFEEE0;
+    border: 1px solid rgb(189, 188, 188);
+}
+
+.collection-btn:hover {
+    transition: 0.8s;
+    background-color: #1D2123;
+    color: #EFEEE0;
+    border: 1px solid rgb(189, 188, 188);
+}
+
+.like-btn:hover {
+    transition: 0.8s;
+    border: 1px solid;
+    background-color: #FACD66;
+    color: #1D2123;
+}
+
+.music-container {
+    position: relative;
+    overflow: hidden;
+/*    width: 14%;  */
+    width: 14%;
+    border-radius: 1em;
+    margin-top: 1.5%;
+    margin-right: 2.4%;
+/*    background-color: green; */
+}
+
+.music-container > img {
+    vertical-align: middle;
+    height: 100%;
+    object-fit: cover;
+}
+.music-text {
+    position: absolute;
+    bottom: 8%;
+    left: 0%;
+    padding-left: 5%;
+    text-align: justify;
+    display: flex;
+    width: 100%;
+/*    background-color: red; */
+}
+
+.music-container:hover #slide {
+    filter: blur(2px);
+    transform: scale(1.2);
+    transition: all .5s;
+    vertical-align: middle;
+}
+
+#likes {
+    display: none; 
+}
+
+.music-container:hover #likes {
+    display: flex;
+    padding-top: 0.4em;
+    animation: 2s likes;
+      animation-delay: 2s;
+}
+
+.music-text > img {
+/*    margin-left: auto; */
+    left: -100px;
+    transition: 0.7s;
+    margin-left: auto;
+    margin-right: 0.5em;
+}
+
+#play-btn {
+    opacity: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.music-container:hover #play-btn {
+    opacity: 1.0;
+}
+
+.music-text h4, #likes {
+/*    background-color: green; */
+    color: rgb(255, 255, 255);
+    font-size: clamp(0.7em, 1vw, 1.3em);
+    letter-spacing: 0.1em;
+    font-weight: 100;
+}
+
+.music-text p {
+    font-size: clamp(0.5em, 0.7vw, 0.9em);
+    font-weight: lighter;
+    padding-top: 0.3em;
+}
+
+@media (max-width: 678px) {
+    .musicPage-grid {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .music-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 80vw;
+        border-radius: 1em;
+        margin-right: 2.4%;
+        margin-top: 1em;
+        margin-bottom: 1.5rem;
+    }
+    .music-text {
+        width: 100%;
+        font-size: 2em;
+    }
+}

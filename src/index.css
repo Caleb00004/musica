@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+html {
+  background-color: #1D2123; 
+/*  background-image: url('./sections/album/images/Lead-image.svg');
+  background-repeat: no-repeat;
+  background-size: 100%; */
+  font-family: 'Work Sans', sans-serif;
+}

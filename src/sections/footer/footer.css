@@ -1,0 +1,228 @@
+.music-footer {
+  display: grid;
+  grid-template-columns: 20% 60% auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+/*    background-color: rgba(0, 0, 0, .3); */
+  backdrop-filter: blur(10px);
+/*    background-color: rgb(47, 40, 40); */
+  width: 100%;
+  height:5.5em;
+  margin: 0;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+  }
+   
+  /* Changing the font sizes to suitable ones */
+  .now-playing {
+    font-size: 1rem;
+  }
+   
+  .track-name {
+    font-size: 3rem;
+  }
+   
+  .track-artist {
+    font-size: 1.5rem;
+  }
+   
+  /* Using flex with the row direction to
+     align items in a horizontal direction */
+  .buttons {
+    display: flex;
+    width: 10.5em;
+    height: 2.5em;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .song-playing{
+    display: flex;
+/*    background-color: red; */
+    padding: 3% 0em 0.6% 10%;
+  }
+
+  .song-playing-name {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 0.5rem;
+    font-size: clamp(0.7em, 1vw, 1.1em);
+  }
+
+  .song-playing > img {
+    border-radius: 10px;
+    width: clamp(3em, 3.5vw, 3.6em);
+    object-fit: cover;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+   
+  .playpause-track,
+  .prev-track,
+  .next-track {
+    padding: 0em 0.9em 0em 0.9em;
+    opacity: 0.8;
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+  }
+   
+  /* Change the opacity when mouse is hovered */
+  .playpause-track:hover,
+  .prev-track:hover,
+  .next-track:hover {
+    opacity: 1.0;
+  }
+   
+  /* Define the slider width so that it scales properly */
+  .slider_container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .track-slider {
+    display: flex;
+    align-items: center;
+  }
+
+  .volume-container{
+    width: 100%;
+/*    max-width: 400px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 2px;
+    background-color: red;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+   
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: orange;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+
+  .seek_slider::-webkit-slider-thumb:hover,
+  .volume_slider::-webkit-slider-thumb:hover
+  {
+    border: 2px solid white;
+  }
+   
+  /* Change the opacity when mouse is hovered */
+  .seek_slider:hover,
+  .volume_slider:hover {
+    opacity: 1.0;
+  }
+   
+  .seek_slider {
+    width: 100%;
+  }
+   
+  .volume_slider {
+    width: 50%;
+  }
+   
+  .current-time,
+  .total-duration {
+    padding: 10px;
+  }
+   
+  i.fa-volume-down,
+  i.fa-volume-up {
+    padding: 10px;
+  }
+   
+  /* Change the mouse cursor to a pointer
+     when hovered over */
+  i.fa-play-circle,
+  i.fa-pause-circle,
+  i.fa-step-forward,
+  i.fa-step-backward {
+    cursor: pointer;
+  }
+
+  @media (max-width: 678px) {
+    .volume-container {
+      display: none;
+    }
+
+    .music-footer {
+      display: flex;
+      flex-direction: column;
+      height:5.1em;
+    }
+    .song-playing{
+      display: flex;
+  /*    background-color: red; */
+      padding: 1% 0em 1% 3%;
+    }
+    .buttons{
+      padding: 0;
+      margin: 0;
+      width: auto;
+      height: auto;
+/*      background-color: red; */
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 2%;
+      margin-right: 5%;
+    }
+    .shuffle-track, .prev-track, .repeat-track{
+      display: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .next-track > img {
+      width: 1.7em;
+    }
+    .song-playing > img {
+      width: clamp(3em, 3.5vw, 3.6em);
+      object-fit: cover;
+    }
+    .current-time,
+    .total-duration {
+      padding: 2px;
+      font-size: 0.7em;
+    }
+    /*
+    .next-track {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .playpause-track{
+      position: absolute;
+      background-color: red;
+      right: 0;
+    }*/
+
+
+  } 
